@@ -10,7 +10,7 @@ before_install:
  - docker build -t mssymchoi/docker-react-app -f Dockerfile.dev . 
 
 script: 
- - docker run -e CI=true smileajw1004/docker-react-app npm run test -- --coverage
+ - docker run -e CI=true mssymchoi/docker-react-app npm run test -- --coverage
 
 after_success: 
  - "Test Success"
